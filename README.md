@@ -12,7 +12,7 @@ IDE: NetBeans
 - Javascript: Barcode:JS 
 
 2. Webserver: 
-- PHP 7.0+
+- Apache/PHP 7.0+
 
 3. Databes
 - MariaDB 
