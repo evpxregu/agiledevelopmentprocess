@@ -6,6 +6,7 @@ https://join.slack.com/t/adpteam6/shared_invite/enQtMzM0Mjg5MTgyODM2LTg3YmFjNTU5
 # Development Framework 
 
 1. Web application:
+IDE: NetBeans
 - HTML: 
 - CSS: Boostrap
 - Javascript: Barcode:JS 
