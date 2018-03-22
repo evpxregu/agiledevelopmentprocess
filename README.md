@@ -8,7 +8,7 @@ https://join.slack.com/t/adpteam6/shared_invite/enQtMzM0Mjg5MTgyODM2LTg3YmFjNTU5
 1. Web application:
 - HTML: 
 - CSS: Boostrap
-- Java Script: Barcode:JS 
+- Javascript: Barcode:JS 
 
 2. Webserver: 
 - PHP 
