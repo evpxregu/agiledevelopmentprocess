@@ -5,7 +5,7 @@ https://join.slack.com/t/adpteam6/shared_invite/enQtMzM0Mjg5MTgyODM2LTg3YmFjNTU5
 
 # Dev Framework 
 
-1. WEB: HTML, CSS, JS. 
+1. WEB: HTML, CSS (Boostrap), JS. 
 - Barcode:JS 
 
 2. Webserver: PHP 
