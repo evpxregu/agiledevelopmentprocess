@@ -7,12 +7,12 @@ https://join.slack.com/t/adpteam6/shared_invite/enQtMzM0Mjg5MTgyODM2LTg3YmFjNTU5
 
 1. Web application:
 IDE: NetBeans
-- HTML: 
-- CSS: Boostrap
+- HTML
+- CSS: Bootstrap
 - Javascript: Barcode:JS 
 
 2. Webserver: 
-- PHP 
+- PHP 7.0+
 
 3. Databes
-- POSTGRESQL 
+- MariaDB 
