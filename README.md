@@ -14,5 +14,5 @@ IDE: NetBeans
 2. Webserver: 
 - Apache/PHP 7.0+
 
-3. Databes
+3. Database
 - MariaDB 
