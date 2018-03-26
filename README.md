@@ -14,8 +14,3 @@ IDE: NetBeans
 
 3. Database
 - MariaDB 
-
-# Customer Development 
-Question: Customer answer (Rawdata) 
-
-
