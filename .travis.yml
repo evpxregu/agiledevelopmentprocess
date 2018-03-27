@@ -1,5 +1,5 @@
 language: c # not really, but using make
-
+  
 # pandoc is used to generate the output files
 # the pandoc version in the package management system is a tad old though
 # so tables don't turn out nice
