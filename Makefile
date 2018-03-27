@@ -1,6 +1,6 @@
 PANDOC ?= pandoc
 
-all: textemplate pdftemplate wordtemplate requirements
+all: textemplate pdftemplate wordtemplate
 
 
 # convert the markdown template to latex
