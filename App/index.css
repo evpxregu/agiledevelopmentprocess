@@ -6,3 +6,6 @@ body{
 	font-family: "Helvetica Neue", "Liberation Sans", Calibri, Arial, sans-serif;
 	background: #ffffff;
 }
+p{
+	color: blue;
+}
