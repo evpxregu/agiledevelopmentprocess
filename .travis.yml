@@ -1,7 +1,4 @@
-language: php # not really, but using make
-php:
-  - '5.6'
-  - '7.1'
+language: c # not really, but using make
   
 # pandoc is used to generate the output files
 # the pandoc version in the package management system is a tad old though
