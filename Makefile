@@ -14,10 +14,5 @@ pdftemplate: report_template.md
 # convert the markdown template to word
 wordtemplate: report_template.md
 	$(PANDOC) -o out/report_template.docx $<
-
-# convert the markdown requirements to pdf
-requirements: project.md
-	$(PANDOC) -V colorlinks -o out/project_meta_requirements.pdf $<
-
 clean:
 	rm out/*
