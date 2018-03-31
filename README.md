@@ -1,10 +1,4 @@
-# agiledevelopmentprocess
-agile development process 
-
-https://join.slack.com/t/adpteam6/shared_invite/enQtMzM0Mjg5MTgyODM2LTg3YmFjNTU5MjI3ZjFmZDU4ODA3YzdkYmRkMTJlODQ3ODZkODU4YmMzZmFmZDdlMzk4MjBhZGQ4ZWE4NjFhZTg <- invite link for slack
-
-# Development Framework 
-
+# Development Framework [![Build Status](https://travis-ci.org/evpxregu/agiledevelopmentprocess.svg?branch=master)](https://travis-ci.org/evpxregu/agiledevelopmentprocess)
 1. Web application:
 IDE: NetBeans
 - HTML
@@ -14,5 +8,5 @@ IDE: NetBeans
 2. Webserver: 
 - Apache/PHP 7.0+
 
-3. Database
+3. Database: 
 - MariaDB 
