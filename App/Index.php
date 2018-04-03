@@ -115,6 +115,12 @@
                 <ul class="thumbnails"></ul>
             </div>
             
+            <!-- Manual barcode input -->
+            <form method="get" action="result.php">
+                <input type="input" name="barcode" value="0">
+                <input type="submit" value="Check Barcode">
+            </form>
+            
         </section>
          <!-- Modal -->
         <div class="modal fade" id="resultModal" role="dialog">
