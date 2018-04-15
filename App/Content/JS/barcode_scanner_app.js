@@ -232,7 +232,7 @@ $(function() {
                 result.boxes.filter(function (box) {
                     return box !== result.box;
                 }).forEach(function (box) {
-                    Quagga.ImageDebug.drawPath(box, {x: 0, y: 1}, drawingCtx, {color: "green", lineWidth: 2});
+                    Quagga.ImageDebug.drawPath(box, {x: 0, y: 1}, drawingCtx, {color: "red", lineWidth: 2});
                 });
             }
 
@@ -282,6 +282,12 @@ $(function() {
            console.log(textStatus);
            console.log(data); 
         });
+        try {
+            Block of code to try;
+        }
+        catch(err) {
+            Block of code to handle errors;
+        }
         //todo rh: think about error handling
     }
 

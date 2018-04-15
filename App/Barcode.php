@@ -11,6 +11,9 @@ if($code_type === 'ean_13' && $code_number === '5410091692278')
     //note RH: return HTML so we can later switch to an android application easier using some webviewer or an AJAX or support for a version for jsblock users with degraded experience.
     echo "My test product information, set from barcode.php, can contain dynamic HTML "  . rand(0,100000);
 }
+
+if($code_type === 'ean_13' && $code_number === '5119417807081')
+echo 'Yeah';
 else
 {
     http_response_code(404); //note RH; set status code in an attempt to use a rest like structure
