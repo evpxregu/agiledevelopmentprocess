@@ -288,6 +288,7 @@ $(function() {
         catch(err) {
             Block of code to handle errors;
         }
+         var domExceptionMessage = domEsceptionInstance.message;
         //todo rh: think about error handling
     }
 
