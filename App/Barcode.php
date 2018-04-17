@@ -13,7 +13,7 @@ if($code_type === 'ean_13' && $code_number === '5410091692278')
 }
 
 else if ($code_type === 'ean_13' && $code_number === '0856991004103') {
-    echo "<h1>N!ck's kexbar! sort as plastics!</h1>"; 
+    echo "N!ck's kexbar! sort as plastics!"; 
 }
 
 else if ($code_type === 'ean_13' && $code_number === '5449000131836') {
