@@ -16,6 +16,9 @@ switch ($barCode) {
     case 85699100410:
         echo "Plastic";
         break; 
+    case 5449000131836:
+        echo "Plastic";
+        break; 
     default:
         echo "Unkown";
         break;
