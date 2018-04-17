@@ -251,8 +251,8 @@ $(function() {
         var code = result.codeResult.code;
 
         if ( App.lastResult !== code) {
-            console.log('test');
-            alert(code);
+            //console.log('test');
+            //alert(code);
             console.log(result.codeResult.format);
             console.log(JSON.stringify(result.codeResult));
             var format = result.codeResult.format;
@@ -282,13 +282,15 @@ $(function() {
            console.log(textStatus);
            console.log(data); 
         });
-        try {
-            Block of code to try;
-        }
-        catch(err) {
-            Block of code to handle errors;
-        }
-         var domExceptionMessage = domEsceptionInstance.message;
+        
+        //try {
+         //   Block of code to try;
+        //}
+        //catch(err) {
+         //   Block of code to handle errors;
+        //}
+         //var domExceptionMessage = domEsceptionInstance.message;
+         */
         //todo rh: think about error handling
     }
 
