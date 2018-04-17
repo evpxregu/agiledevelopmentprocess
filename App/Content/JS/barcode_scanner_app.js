@@ -277,7 +277,7 @@ $(function() {
         },function(data,textStatus,jqXHR)
         {
             
-            $('#resultModal').modal()
+            $('#resultModal').modal();
             $('#resultModal .modal-body').html(data);
            console.log(textStatus);
            console.log(data); 
