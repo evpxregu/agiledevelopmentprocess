@@ -38,6 +38,9 @@
 
         <section id="container" class="container">
             <div id="interactive" class="viewport"></div>
+            <div id="result">
+                
+            </div>
             <div class="controls">
                 <fieldset class="input-group">
                     <button class="stop">Stop</button>

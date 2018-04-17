@@ -277,8 +277,8 @@ $(function() {
         },function(data,textStatus,jqXHR)
         {
             
-            $('#resultModal').modal();
-            $('#resultModal .modal-body').html(data);
+           //$('#resultModal').modal();
+           $('#result').html(data);
            console.log(textStatus);
            console.log(data); 
         });
