@@ -43,18 +43,15 @@
             <div class="tab">
               <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Camera')">Camera</button>
               <button class="tablinks" onclick="openTab(event, 'Manual')">Manual</button>
+              <button class="tablinks" onclick="openTab(event, 'Add')">Add</button>
             </div>
 
             <!-- Tab content -->
             <div id="Camera" class="tabcontent">
-              <h3>Camera</h3>
                 <div id="interactive" class="viewport"></div>
-              <p>Camera</p>
             </div>
 
             <div id="Manual" class="tabcontent">
-              <h3>Manual</h3>
-              <p>Manual</p> 
               <!-- Manual barcode input -->
             <form method="get" action="result.php">
                 <input type="input" name="barcode" value="0">
@@ -62,8 +59,12 @@
             </form>
             </div>
 
+            <div id="Add" class="tabcontent">
+                  <p>Comming soon!</p>
+            </div>
             
             <h1><div id="result"></div></h1>
+            
             <div class="controls" hidden>
                 <fieldset class="input-group">
                     <button class="stop">Stop</button>
