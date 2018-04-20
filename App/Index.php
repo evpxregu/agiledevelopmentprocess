@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
         <link href="./Content/CSS/Bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="./Content/CSS/custom-GUI.css" rel="stylesheet" type="text/css"/>
         <!-- TO DO rh: bundling  minification in release mode!-->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -14,7 +15,8 @@
         <script src="./Content/js/adapter.js" ></script>
         <script src="./Content/js/quagga.js" ></script>
         <script src="./Content/js/barcode_scanner_app.js" ></script>
-
+        <script src="./Content/js/custom-GUI.js" ></script>
+        
         <style type="text/css">
 
             #interactive.viewport {
@@ -37,7 +39,30 @@
     <body>
 
         <section id="container" class="container">
-            <div id="interactive" class="viewport"></div>
+            <!-- Tab links -->
+            <div class="tab">
+              <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Camera')">Camera</button>
+              <button class="tablinks" onclick="openTab(event, 'Manual')">Manual</button>
+            </div>
+
+            <!-- Tab content -->
+            <div id="Camera" class="tabcontent">
+              <h3>Camera</h3>
+                <div id="interactive" class="viewport"></div>
+              <p>Camera</p>
+            </div>
+
+            <div id="Manual" class="tabcontent">
+              <h3>Manual</h3>
+              <p>Manual</p> 
+              <!-- Manual barcode input -->
+            <form method="get" action="result.php">
+                <input type="input" name="barcode" value="0">
+                <input type="submit" value="Check Barcode">
+            </form>
+            </div>
+
+            
             <h1><div id="result"></div></h1>
             <div class="controls" hidden>
                 <fieldset class="input-group">
@@ -115,13 +140,7 @@
             <div id="result_strip">
                 <ul class="thumbnails"></ul>
             </div>
-            
-            <!-- Manual barcode input -->
-            <form method="get" action="result.php">
-                <input type="input" name="barcode" value="0">
-                <input type="submit" value="Check Barcode">
-            </form>
-            
+                       
         </section>
          <!-- Modal -->
         <div class="modal fade" id="resultModal" role="dialog">
@@ -145,3 +164,8 @@
         
     </body>
 </html>
+
+<script>
+    // Open default camera 
+    document.getElementById("defaultOpen").click();
+</script>
