@@ -39,7 +39,7 @@
         <section id="container" class="container">
             <div id="interactive" class="viewport"></div>
             <h1><div id="result"></div></h1>
-            <div class="controls">
+            <div class="controls" hidden>
                 <fieldset class="input-group">
                     <button class="stop">Stop</button>
                 </fieldset>
@@ -66,9 +66,9 @@
                         <span>Resolution (long side)</span>
                         <select name="input-stream_constraints">
                             <option value="320x240">320px</option>
-                            <option selected="selected" value="640x480">640px</option>
+                            <option value="640x480">640px</option>
                             <option value="800x600">800px</option>
-                            <option value="1280x720">1280px</option>
+                            <option selected="selected" value="1280x720">1280px</option>
                             <option value="1600x960">1600px</option>
                             <option value="1920x1080">1920px</option>
                         </select>

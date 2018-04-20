@@ -20,6 +20,10 @@ else if ($code_type === 'ean_13' && $code_number === '5449000131836') {
     echo "Coca Cola ZERO! sort as plastics!"; 
 }
 
+else if ($code_type === 'ean_13' && $code_number === '7311250004346') {
+    echo "General XR sort as plastic!"; 
+}
+
 else if($code_type === 'ean_13' && $code_number === '5119417807081')
 {
     echo 'Yeah';
