@@ -43,3 +43,23 @@ and open the template in the editor.
     border: 1px solid #ccc;
     border-top: none;
 }
+
+#unknownBarcodeMessage{
+    display:none;
+    position:absolute;
+    top:0px;
+    height:50px;
+    background-color:white;
+    color:black;
+    font-size:20px;
+    border-width: 1px;
+    border-style:solid;
+    border-color:black; 
+    width: 100%;
+    text-align: center;
+    
+}
+#unknownBarcodeMessage.active
+{
+    display:block;
+}

@@ -33,6 +33,8 @@
                 left: 0;
                 top: 0;
             }
+            
+            
         </style>
         <title>Recyling Rush</title>
     </head>
@@ -48,7 +50,12 @@
 
             <!-- Tab content -->
             <div id="Camera" class="tabcontent">
-                <div id="interactive" class="viewport"></div>
+                <div id="interactive" class="viewport">
+                    
+                    <div id="unknownBarcodeMessage" >
+                        Barcode could not be found :(!
+                    </div>
+                </div>
             </div>
 
             <div id="Manual" class="tabcontent">
@@ -60,7 +67,7 @@
             </div>
 
             <div id="Add" class="tabcontent">
-                  <p>Comming soon!</p>
+                  <p>Coming soon!</p>
             </div>
             
             <h1><div id="result"></div></h1>
