@@ -32,6 +32,11 @@ else if($code_type === 'ean_13' && $code_number === '5119417807081')
 {
     echo 'Yeah';
 }
+else if($code_type ==='ean_13' && $code_number === '9780201379624')
+{
+    echo 'super huge barcode';
+}
+    
 else
 {
     http_response_code(404); //note RH; set status code in an attempt to use a rest like structure
