@@ -8,6 +8,7 @@
         
         <link href="./Content/CSS/Bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="./Content/CSS/custom-GUI.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <!-- TO DO rh: bundling  minification in release mode!-->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -41,53 +42,59 @@
     <body>
 
         <section id="container" class="container">
-            <!-- Tab links -->
-            <div class="tab">
-              <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Camera')">Camera</button>
-              <button class="tablinks" onclick="openTab(event, 'Manual')">Manual</button>
-              <button class="tablinks" onclick="openTab(event, 'Add')">Add</button>
-            </div>
-            
-            <div id="Add" class="tabcontent">
-                <form action="addItemstoCSVfile.php" method="post">
-                    <div class = "form-group">
-                         <label>Barcode</label><br/>
-                        <input type="text" name="newbarcode" value="" />
-                    </div>
-                    <div class ="form-group">
-                         <label>ProductName</label><br/>
-                        <input type="text" name="newname" value="" />
-                    </div>
-                    <div class ="form-group">
-                        <label>Category</label><br/>
-                        <input type="text" name="newcategory" value="" />
-                    </div>
-                    <div class ="form-group">
-                        <input type ="submit" name="submit" value="Submit">
-                    </div>
-                </form>
-            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                    <div class="col-lg-8" align="center">
+                        <!-- Tab links -->
+                        <div class="tab">
+                          <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Camera')">Scan<i class="material-icons">camera_enhance</i></button>
+                          <button class="tablinks" onclick="openTab(event, 'Manual')">Search<i class="material-icons">search</i></button>
+                          <button class="tablinks" onclick="openTab(event, 'Add')">Add<i class="material-icons">note_add</i></button>
+                        </div>
 
-            <!-- Tab content -->
-            <div id="Camera" class="tabcontent">
-                <div id="interactive" class="viewport">
-                    
-                    <div id="unknownBarcodeMessage" >
-                        Barcode could not be found :(!
+                        <!-- Tab content -->
+
+                        <div id="Camera" class="tabcontent">
+                            <div id="interactive" class="viewport">
+                                
+                                <div id="unknownBarcodeMessage" >
+                                    Barcode could not be found :(!
+                                </div>
+                            </div>
+                            <h1><div id="scanresult"></div></h1>
+
+                        </div>
+                            
+
+                        <div id="Manual" class="tabcontent topmargin">
+                        <!-- Manual barcode input -->
+                        <form method="get" action="result.php">
+                            <input type="input" name="barcode" value="0">
+                            <input type="submit" value="Check Barcode">
+                        </form>
+                        </div>
+                        <div id="Add" class="tabcontent topmargin">
+                            <form action="addItemstoCSVfile.php" method="post">
+                                <div class = "form-group">
+                                     <label>Barcode</label><br/>
+                                    <input type="text" name="newbarcode" value="" />
+                                </div>
+                                <div class ="form-group">
+                                     <label>ProductName</label><br/>
+                                    <input type="text" name="newname" value="" />
+                                </div>
+                                <div class ="form-group">
+                                    <label>Category</label><br/>
+                                    <input type="text" name="newcategory" value="" />
+                                </div>
+                                <div class ="form-group">
+                                    <input type ="submit" name="submit" value="Submit">
+                                </div>
+                            </form>
+                        </div> 
                     </div>
-                </div>
+                <div class="col-lg-2"></div>
             </div>
-
-            <div id="Manual" class="tabcontent">
-              <!-- Manual barcode input -->
-            <form method="get" action="result.php">
-                <input type="input" name="barcode" value="0">
-                <input type="submit" value="Check Barcode">
-            </form>
-            </div>
-
-            <h1><div id="result"></div></h1>
-            
             <div class="controls" hidden>
                 <fieldset class="input-group">
                     <button class="stop">Stop</button>
