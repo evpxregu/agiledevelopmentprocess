@@ -31,7 +31,7 @@ if (isset($_POST["submit"]))
     // NEW MOFIFICATION (CATEGORY)
         if(empty($_POST["newcategory"]))
         {
-            $error .= "<p>Please Enter Product Name</p>";
+            $error .= "<p>Please Enter Product Category</p>";
         }
     else
         {
