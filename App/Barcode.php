@@ -21,7 +21,11 @@ else if ($code_type === 'ean_13' && $code_number === '5449000131836') {
 }
 
 else if ($code_type === 'ean_13' && $code_number === '7311250004346') {
-    echo "General XR sort as plastic!"; 
+    echo "General XR White sort as plastic!"; 
+}
+
+else if ($code_type === 'ean_13' && $code_number === '7311250004551') {
+    echo "General XR Original sort as plastic!"; 
 }
 
 else if($code_type === 'ean_13' && $code_number === '5119417807081')

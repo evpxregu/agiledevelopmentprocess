@@ -39,32 +39,37 @@
     <body>
 
         <section id="container" class="container">
-            <!-- Tab links -->
-            <div class="tab">
-              <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Camera')">Camera</button>
-              <button class="tablinks" onclick="openTab(event, 'Manual')">Manual</button>
-              <button class="tablinks" onclick="openTab(event, 'Add')">Add</button>
-            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <!-- Tab links -->
+                        <div class="tab">
+                          <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Camera')">Camera</button>
+                          <button class="tablinks" onclick="openTab(event, 'Manual')">Manual</button>
+                          <button class="tablinks" onclick="openTab(event, 'Add')">Add</button>
+                        </div>
 
-            <!-- Tab content -->
-            <div id="Camera" class="tabcontent">
-                <div id="interactive" class="viewport"></div>
-            </div>
+                        <!-- Tab content -->
 
-            <div id="Manual" class="tabcontent">
-              <!-- Manual barcode input -->
-            <form method="get" action="result.php">
-                <input type="input" name="barcode" value="0">
-                <input type="submit" value="Check Barcode">
-            </form>
-            </div>
+                        <div id="Camera" class="tabcontent">
+                            <div id="interactive" class="viewport"></div>     
+                        </div>
 
-            <div id="Add" class="tabcontent">
-                  <p>Comming soon!</p>
+                        <div id="Manual" class="tabcontent">
+                          <!-- Manual barcode input -->
+                        <form method="get" action="result.php">
+                            <input type="input" name="barcode" value="0">
+                            <input type="submit" value="Check Barcode">
+                        </form>
+                        </div>
+
+                        <div id="Add" class="tabcontent">
+                              <p>Comming soon!</p>
+                        </div>
+                        <h1><div id="result"></div></h1>
+                    </div>
+                <div class="col-lg-2"></div>
             </div>
-            
-            <h1><div id="result"></div></h1>
-            
             <div class="controls" hidden>
                 <fieldset class="input-group">
                     <button class="stop">Stop</button>
