@@ -8,6 +8,7 @@
         
         <link href="./Content/CSS/Bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="./Content/CSS/custom-GUI.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <!-- TO DO rh: bundling  minification in release mode!-->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -44,9 +45,9 @@
                     <div class="col-lg-8" align="center">
                         <!-- Tab links -->
                         <div class="tab">
-                          <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Camera')">Camera</button>
-                          <button class="tablinks" onclick="openTab(event, 'Manual')">Manual</button>
-                          <button class="tablinks" onclick="openTab(event, 'Add')">Add</button>
+                          <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Camera')">Scan<i class="material-icons">camera_enhance</i></button>
+                          <button class="tablinks" onclick="openTab(event, 'Manual')">Search<i class="material-icons">search</i></button>
+                          <button class="tablinks" onclick="openTab(event, 'Add')">Add<i class="material-icons">note_add</i></button>
                         </div>
 
                         <!-- Tab content -->
