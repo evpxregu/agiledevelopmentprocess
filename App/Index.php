@@ -45,6 +45,25 @@
               <button class="tablinks" onclick="openTab(event, 'Manual')">Manual</button>
               <button class="tablinks" onclick="openTab(event, 'Add')">Add</button>
             </div>
+            
+            <div id="Add" class="tabcontent">
+                <form action="addItemstoCSVfile.php" method="post">
+                    <div class = "form-group">
+                         <label>Barcode</label><br/>
+                    <input type="text" name="newbarcode" value="" />
+                    </div>
+                    <div class ="form-group">
+                         <label>ProductName</label><br/>
+                    <input type="text" name="newname" value="" />
+                    </div>
+                    <div class ="form-group">
+                        <label>Category</label><br/>
+                    <input type="text" name="newcategory" value="" />
+                    <div>
+                        <input type ="submit" name="submit value="Submit">
+                    </div>
+                </form>
+            </div>
 
             <!-- Tab content -->
             <div id="Camera" class="tabcontent">
