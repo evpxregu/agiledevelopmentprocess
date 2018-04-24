@@ -78,10 +78,6 @@
             </form>
             </div>
 
-            <div id="Add" class="tabcontent">
-                  <p>Comming soon!</p>
-            </div>
-            
             <h1><div id="result"></div></h1>
             
             <div class="controls" hidden>
