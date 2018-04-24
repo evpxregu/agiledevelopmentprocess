@@ -283,10 +283,15 @@ $(function() {
         },function(data,textStatus,jqXHR)
         {
             
+<<<<<<< HEAD
            $('#resultModal').modal();
            $('.modal-body').text(data);
            
            //$('#result').html(data);
+=======
+           //$('#resultModal').modal();
+           $('#scanresult').html(data);
+>>>>>>> 56392e978518bdcf87568fe308711832bb6df213
            console.log(textStatus);
            console.log(data); 
            for(var intervalId in App.detectionHandlerId)
