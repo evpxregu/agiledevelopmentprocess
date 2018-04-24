@@ -1,5 +1,5 @@
 <?php // 
-$error = $barcode = $name = '';
+$error = $barcode = $name = $category = '';
 if (isset($_POST["submit"]))   
     {
     // 1. Validating Barcode Value
@@ -28,7 +28,17 @@ if (isset($_POST["submit"]))
             $name = $_POST["newname"];
             $name = trim($name);
         }
-    
+    // NEW MOFIFICATION (CATEGORY)
+        if(empty($_POST["newcategory"]))
+        {
+            $error .= "<p>Please Enter Product Category</p>";
+        }
+    else
+        {
+            $category = $_POST["newcategory"];
+            $category = trim($category);
+        }
+        
     // 3. Taking Action Given That All Fields Are Valid :)
     // Opening the CSV file, and adding the barcode and new item name to it
     if($error == '')
@@ -39,13 +49,14 @@ if (isset($_POST["submit"]))
         $line = array(
             'id' => $n,
             'barcode' => $barcode,
-            'name' => $name
+            'name' => $name,
+            'category' => $category
         );
         
         fputcsv($csv, $line);
-        $error = "Item Successfully Added </br>".$barcode." : ".$name;
+        $error = "Item Successfully Added </br>".$barcode." : ".$name."<br/>Category is: ".$category;
         // Reset values
-        $name = $barcode = '';
+        $name = $barcode = $category = '';
     }
     
  
