@@ -278,7 +278,7 @@ $(function() {
         {
             
            //$('#resultModal').modal();
-           $('#result').html(data);
+           $('#scanresult').html(data);
            console.log(textStatus);
            console.log(data); 
         });

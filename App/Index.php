@@ -41,7 +41,7 @@
         <section id="container" class="container">
             <div class="row">
                 <div class="col-lg-2"></div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8" align="center">
                         <!-- Tab links -->
                         <div class="tab">
                           <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Camera')">Camera</button>
@@ -52,21 +52,22 @@
                         <!-- Tab content -->
 
                         <div id="Camera" class="tabcontent">
-                            <div id="interactive" class="viewport"></div>     
+                            <div id="interactive" class="viewport"></div>
+                            <h1><div id="scanresult"></div></h1>
                         </div>
 
-                        <div id="Manual" class="tabcontent">
-                          <!-- Manual barcode input -->
+                        <div id="Manual" class="tabcontent topmargin">
+                        <!-- Manual barcode input -->
                         <form method="get" action="result.php">
                             <input type="input" name="barcode" value="0">
                             <input type="submit" value="Check Barcode">
                         </form>
                         </div>
 
-                        <div id="Add" class="tabcontent">
-                              <p>Comming soon!</p>
+                        <div id="Add" class="tabcontent topmargin">
+                              <p>Coming soon!</p>
                         </div>
-                        <h1><div id="result"></div></h1>
+                        
                     </div>
                 <div class="col-lg-2"></div>
             </div>
