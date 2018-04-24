@@ -217,7 +217,8 @@ $(function() {
               },
             locate: true
         },
-        lastResult : null
+        lastResult : null,
+        timeFirstDetection: null //in unix timestamp
     };
 
     App.init();
@@ -249,7 +250,16 @@ $(function() {
     //todo rh: later check if this is in a closure or in the global object
     detectionFunction =function(result) {
         var code = result.codeResult.code;
-
+        if(App.timeFirstDetection === null)
+        {
+            App.timeFirstDetection = Date.now();
+        }
+        else if(App.timeFirstDetection <= Date.now() - 2000)
+        {
+            showUnknownbarcodeMessage();
+            App.timeFirstDetection = null;
+        }
+        
         if ( App.lastResult !== code) {
             //console.log('test');
             //alert(code);
@@ -281,6 +291,7 @@ $(function() {
            $('#result').html(data);
            console.log(textStatus);
            console.log(data); 
+           hideUnknownbarcodeMessage();
         });
         
         //try {
@@ -292,6 +303,15 @@ $(function() {
          //var domExceptionMessage = domEsceptionInstance.message;
          
         //todo rh: think about error handling
+    }
+    
+    function showUnknownbarcodeMessage()
+    {
+        $('#unknownBarcodeMessage').show();
+    }
+    function hideUnknownBarcodeMessage()
+    {
+        $('#unknownBarcodeMessage').hide();
     }
 
 });

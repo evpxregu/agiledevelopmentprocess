@@ -33,6 +33,8 @@
                 left: 0;
                 top: 0;
             }
+            
+            
         </style>
         <title>Recyling Rush</title>
     </head>
@@ -67,7 +69,12 @@
 
             <!-- Tab content -->
             <div id="Camera" class="tabcontent">
-                <div id="interactive" class="viewport"></div>
+                <div id="interactive" class="viewport">
+                    
+                    <div id="unknownBarcodeMessage" >
+                        Barcode could not be found :(!
+                    </div>
+                </div>
             </div>
 
             <div id="Manual" class="tabcontent">
@@ -78,6 +85,13 @@
             </form>
             </div>
 
+<<<<<<< HEAD
+=======
+            <div id="Add" class="tabcontent">
+                  <p>Coming soon!</p>
+            </div>
+            
+>>>>>>> add2815cf02df6b1fec989a35d6c252c3a3adea4
             <h1><div id="result"></div></h1>
             
             <div class="controls" hidden>
