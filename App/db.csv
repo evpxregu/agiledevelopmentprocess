@@ -23,3 +23,7 @@
 22,123,oscar
 23,222,team6
 24,345,afs,plas
+25,343434,"<script>alert('hello world')</script>","<script>alert('hello world')</script>"
+26,222,22,22
+27,1337,productname,category
+28,12345,productname,category

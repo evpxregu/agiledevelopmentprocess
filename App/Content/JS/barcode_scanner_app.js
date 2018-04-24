@@ -218,7 +218,7 @@ $(function() {
             locate: true
         },
         lastResult : null,
-        timeFirstDetection: null //in unix timestamp
+        detectionHandlerId:[]
     };
 
     App.init();
@@ -250,15 +250,11 @@ $(function() {
     //todo rh: later check if this is in a closure or in the global object
     detectionFunction =function(result) {
         var code = result.codeResult.code;
-        if(App.timeFirstDetection === null)
-        {
-            App.timeFirstDetection = Date.now();
-        }
-        else if(App.timeFirstDetection <= Date.now() - 2000)
-        {
+        
+        App.detectionHandlerId.push(setInterval(function(){
             showUnknownbarcodeMessage();
-            App.timeFirstDetection = null;
-        }
+        }, 2000));
+        
         
         if ( App.lastResult !== code) {
             //console.log('test');
@@ -287,11 +283,18 @@ $(function() {
         },function(data,textStatus,jqXHR)
         {
             
-           //$('#resultModal').modal();
-           $('#result').html(data);
+           $('#resultModal').modal();
+           $('.modal-body').text(data);
+           
+           //$('#result').html(data);
            console.log(textStatus);
            console.log(data); 
-           hideUnknownbarcodeMessage();
+           for(var intervalId in App.detectionHandlerId)
+           {
+               clearInterval(intervalId);
+           }
+           
+           hideUnknownBarcodeMessage();
         });
         
         //try {
