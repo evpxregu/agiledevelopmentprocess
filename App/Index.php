@@ -52,16 +52,17 @@
                 <form action="addItemstoCSVfile.php" method="post">
                     <div class = "form-group">
                          <label>Barcode</label><br/>
-                    <input type="text" name="newbarcode" value="" />
+                        <input type="text" name="newbarcode" value="" />
                     </div>
                     <div class ="form-group">
                          <label>ProductName</label><br/>
-                    <input type="text" name="newname" value="" />
+                        <input type="text" name="newname" value="" />
                     </div>
                     <div class ="form-group">
                         <label>Category</label><br/>
-                    <input type="text" name="newcategory" value="" />
-                    <div>
+                        <input type="text" name="newcategory" value="" />
+                    </div>
+                    <div class ="form-group">
                         <input type ="submit" name="submit" value="Submit">
                     </div>
                 </form>
