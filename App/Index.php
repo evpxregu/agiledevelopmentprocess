@@ -85,13 +85,6 @@
             </form>
             </div>
 
-<<<<<<< HEAD
-=======
-            <div id="Add" class="tabcontent">
-                  <p>Coming soon!</p>
-            </div>
-            
->>>>>>> add2815cf02df6b1fec989a35d6c252c3a3adea4
             <h1><div id="result"></div></h1>
             
             <div class="controls" hidden>
