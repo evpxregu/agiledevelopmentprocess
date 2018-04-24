@@ -62,7 +62,7 @@
                         <label>Category</label><br/>
                     <input type="text" name="newcategory" value="" />
                     <div>
-                        <input type ="submit" name="submit value="Submit">
+                        <input type ="submit" name="submit" value="Submit">
                     </div>
                 </form>
             </div>
