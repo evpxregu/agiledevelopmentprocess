@@ -251,7 +251,7 @@ $(function() {
     detectionFunction =function(result) {
         var code = result.codeResult.code;
         
-        App.detectionHandlerId.push(setInterval(function(){
+        App.detectionHandlerId.push(setTimeout(function(){
             showUnknownbarcodeMessage();
         }, 2000));
         
@@ -293,8 +293,9 @@ $(function() {
            console.log(data); 
            for(var intervalId in App.detectionHandlerId)
            {
-               clearInterval(intervalId);
+               clearTimeout(intervalId);
            }
+           App.detectionHandlerId = [];
            
            hideUnknownBarcodeMessage();
         });
@@ -318,5 +319,22 @@ $(function() {
     {
         $('#unknownBarcodeMessage').hide();
     }
-
+    $('#resultModal').on('show.bs.modal', function () { 
+        
+        Quagga.start();
+    });
+    
+    $('#resultModal').on('hide.bs.modal', function () { 
+        
+        
+        hideUnknownBarcodeMessage();
+        for(var intervalId in App.detectionHandlerId)
+        {
+            clearTimeout(intervalId);
+        }
+        App.detectionHandlerId = [];
+        App.lastResult = null;
+        console.log('Fired at start of hide event!');
+    }); 
 });
+
