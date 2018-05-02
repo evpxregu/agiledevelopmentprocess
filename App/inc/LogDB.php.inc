@@ -1,5 +1,5 @@
 <?php
-require_once('Idb.php.inc');
+require_once('IlogDB.php.inc');
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,28 +11,26 @@ require_once('Idb.php.inc');
  *
  * @author Rick
  */
-class CSVDB implements Idb
+class LogDB implements logDBI
 {
     
-    private $filename = 'db.csv';    
-    public function Add( $barcode,  $name, $category)
+    private $filename = 'log.csv';
+    public function Add( $user_id,  $barcode)
     {
+        echo 'lol';
         $csv = fopen($this->filename, "a");
         $n = count(file($this->filename));
         
         $line = array(
             'id' => $n,
+            'user_id' => $user_id,
             'barcode' => $barcode,
-            'name' => $name,
-            'category' => $category
+            'timestamp' => time()
         );
         
         fputcsv($csv, $line);
-   }
-    public function Get(string $barcode)
-    {
-        
     }
+    
            
     //put your code here
 }
