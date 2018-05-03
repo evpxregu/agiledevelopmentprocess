@@ -42,12 +42,6 @@ session_start();
         <title>Recyling Rush</title>
     </head>
     <body>
-        <?php
-        $_SESSION["favcolor"] = "green";
-        $_SESSION["favanimal"] = "cat";
-        echo "Session variables are set.";
-        ?>
-
         <section id="container" class="container">
             <div class="row">
                 <div class="col-lg-2"></div>
@@ -185,7 +179,7 @@ session_start();
             </div>
                        
         </section>
-         <!-- Modal -->
+        <!-- Modal -->
         <div class="modal fade" id="resultModal" role="dialog">
           <div class="modal-dialog">
 
@@ -204,7 +198,6 @@ session_start();
 
           </div>
         </div>
-        
     </body>
 </html>
 
