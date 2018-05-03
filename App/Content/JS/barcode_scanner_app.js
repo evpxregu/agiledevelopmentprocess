@@ -283,8 +283,9 @@ $(function() {
         },function(data,textStatus,jqXHR)
         {
             
-           $('#resultModal').modal();
-           $('.modal-body').text(data);
+           $('#unknownBarcodeMessage').text(data);  
+           //$('#resultModal').modal();
+           //$('.modal-body').text(data);
            
            //$('#result').html(data);
            //$('#resultModal').modal();
@@ -297,7 +298,7 @@ $(function() {
            }
            App.detectionHandlerId = [];
            
-           hideUnknownBarcodeMessage();
+           //hideUnknownBarcodeMessage();
         });
         
         //try {
