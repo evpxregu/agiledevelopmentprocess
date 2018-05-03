@@ -252,7 +252,7 @@ $(function() {
         var code = result.codeResult.code;
         
         App.detectionHandlerId.push(setTimeout(function(){
-            showUnknownbarcodeMessage();
+            //showUnknownbarcodeMessage();
         }, 2000));
         
         
@@ -283,11 +283,11 @@ $(function() {
         },function(data,textStatus,jqXHR)
         {
             
-           $('#unknownBarcodeMessage').text(data);  
+           //$('#unknownBarcodeMessage').text(data);  
            //$('#resultModal').modal();
            //$('.modal-body').text(data);
            
-           //$('#result').html(data);
+           $('#scanresult').html(data);
            //$('#resultModal').modal();
            //$('#scanresult').html(data);
            console.log(textStatus);
