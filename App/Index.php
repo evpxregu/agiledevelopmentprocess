@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
@@ -68,10 +66,15 @@
 
                         <div id="Manual" class="tabcontent topmargin">
                         <!-- Manual barcode input -->
-                        <form method="get" action="result.php">
-                            <input type="input" name="barcode" value="0">
-                            <input type="submit" value="Check Barcode">
-                        </form>
+                        <!--<form method="get" action="Barcode.php">
+                           <input type="input" name="barcode" value="0">
+                           <input type="submit" value="Check Barcode">
+                        </form> -->
+                        
+                        <input type="input" id="code_number">
+                        <button onclick="GetProductInfoManual('ean_13', document.getElementById('code_number').value)">Check Barcode</button>
+                        
+                        
                         </div>
                         <div id="Add" class="tabcontent topmargin">
                             <form action="addItemstoCSVfile.php" method="post">
@@ -199,4 +202,26 @@
 <script>
     // Open default camera 
     document.getElementById("defaultOpen").click();
+    
+    function GetProductInfoManual(code_type,code_number){
+        
+        jQuery.post('Barcode.php?',
+        {
+           'code_type': code_type,
+           'code_number': code_number
+                   
+        },function(data,textStatus,jqXHR)
+        {
+            
+           $('#resultModal').modal();
+           $('.modal-body').text(data);
+           
+           //$('#result').html(data);
+           //$('#resultModal').modal();
+           //$('#scanresult').html(data);
+           console.log(textStatus);
+           console.log(data); 
+        });
+    }
+    
 </script>

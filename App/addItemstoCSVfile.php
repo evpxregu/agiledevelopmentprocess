@@ -1,4 +1,6 @@
-<?php // 
+<?php 
+require_once('inc/CSVDB.php.inc');
+// 
 $error = $barcode = $name = $category = '';
 if (isset($_POST["submit"]))   
     {
@@ -43,17 +45,8 @@ if (isset($_POST["submit"]))
     // Opening the CSV file, and adding the barcode and new item name to it
     if($error == '')
     {
-        $csv = fopen("db.csv", "a");
-        $n = count(file("db.csv"));
-        
-        $line = array(
-            'id' => $n,
-            'barcode' => $barcode,
-            'name' => $name,
-            'category' => $category
-        );
-        
-        fputcsv($csv, $line);
+        $csvHandler =  new CSVDB();
+        $csvHandler->Add($name,$barcode,$category);
         $error = "Item Successfully Added </br>".$barcode." : ".$name."<br/>Category is: ".$category;
         // Reset values
         $name = $barcode = $category = '';
