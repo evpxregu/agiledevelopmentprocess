@@ -29,7 +29,10 @@ class LogDB implements logDBI
         
         fputcsv($csv, $line);
     }
-    
+    public function AllLines()
+    {
+         $csv = fopen($this->filename, "a");
+    }
            
     //put your code here
 }

@@ -91,7 +91,13 @@ session_start();
                                 </div>
                                 <div class ="form-group">
                                     <label>Category</label><br/>
-                                    <input type="text" name="newcategory" value="" />
+                                    <select name="newcategory">
+                                        <option value="Plastic" name="Plastic">Plastic</option>
+                                        <option value="Metal" name="Metal">Metal</option>
+                                        <option value="Compost" name="Compost">Compost</option>
+                                        
+                                        <option value="Other" name="Other">Other</option>
+                                    </select>
                                 </div>
                                 <div class ="form-group">
                                     <input type ="submit" name="submit" value="Submit">
