@@ -1,4 +1,8 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -38,6 +42,11 @@
         <title>Recyling Rush</title>
     </head>
     <body>
+        <?php
+        $_SESSION["favcolor"] = "green";
+        $_SESSION["favanimal"] = "cat";
+        echo "Session variables are set.";
+        ?>
 
         <section id="container" class="container">
             <div class="row">
