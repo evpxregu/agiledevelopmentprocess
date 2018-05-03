@@ -1,2 +1,5 @@
 out/*
 /App/nbproject/private/
+/App/text.csv
+/App/log.csv
+/App/db.csv
