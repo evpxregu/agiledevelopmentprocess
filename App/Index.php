@@ -57,6 +57,7 @@ session_start();
                           <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Camera')">Scan<i class="material-icons">camera_enhance</i></button>
                           <button class="tablinks" onclick="openTab(event, 'Manual')">Search<i class="material-icons">search</i></button>
                           <button class="tablinks" onclick="openTab(event, 'Add')">Add<i class="material-icons">note_add</i></button>
+                          <button class="tablinks" onclick="openTab(event, 'History')">History<i class="material-icons">list</i></button>
                         </div>
 
                         <!-- Tab content -->
@@ -103,7 +104,40 @@ session_start();
                                     <input type ="submit" name="submit" value="Submit">
                                 </div>
                             </form>
-                        </div> 
+                        </div>
+                        
+                        <div id="History" class="tabcontent">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Product</th>
+                                    <th scope="col">Sort as</th>
+                                    <th scope="col">Time scanned</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>N!ck's kexbar</td>
+                                    <td>Plastic</td>
+                                    <td>03-05-18</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>General XR White</td>
+                                    <td>Plastic</td>
+                                    <td>22-04-18</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>Aloe Vera Jordgubb</td>
+                                    <td>Plastic</td>
+                                    <td>19-04-18</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
                     </div>
                 <div class="col-lg-2"></div>
             </div>
