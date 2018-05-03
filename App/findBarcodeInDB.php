@@ -10,7 +10,7 @@ function findValuesFromDB($inputBarcode){
   if (($handle = fopen("db.csv", "r")) !== FALSE) {
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
       $num = count($data);
-      if($inputBarcode == $data[1]){
+      if($inputBarcode == $data[2]){
         return $data;
       }
     }

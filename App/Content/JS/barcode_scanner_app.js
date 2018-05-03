@@ -247,6 +247,10 @@ $(function() {
     detectionFunction =function(result) {
         var code = result.codeResult.code;
         
+        App.detectionHandlerId.push(setTimeout(function(){
+            //showUnknownbarcodeMessage();
+        }, 2000));
+        
         if ( App.lastResult !== code) {
             
             console.log(result.codeResult.format);
@@ -271,11 +275,18 @@ $(function() {
            'code_number': code_number
                    
         },function(data,textStatus,jqXHR)
-        {
-            $('#unknownBarcodeMessage').text(data);
-            
-            
-            
+        {      
+           $('#scanresult').html(data);
+
+           console.log(textStatus);
+           console.log(data); 
+           for(var intervalId in App.detectionHandlerId)
+           {
+               clearTimeout(intervalId);
+           }
+           App.detectionHandlerId = [];
+           
+           //hideUnknownBarcodeMessage();
         })
         .fail(function()
         {
