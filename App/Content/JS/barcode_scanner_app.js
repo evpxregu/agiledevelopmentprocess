@@ -279,7 +279,6 @@ $(function() {
         {
             $('#unknownBarcodeMessage').text(data);
             
-            Quagga.start(); 
             
             
         })
