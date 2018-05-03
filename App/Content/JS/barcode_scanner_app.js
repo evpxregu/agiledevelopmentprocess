@@ -290,13 +290,12 @@ $(function() {
                 
                 
             }
-            
-       
         })
         .fail(function()
         {
             $('#unknownBarcodeMessage').text(data);
             Quagga.start(); 
+
         });
     }
 });
