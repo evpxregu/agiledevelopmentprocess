@@ -47,24 +47,28 @@ function getResult($code_type,$code_number)
 
     else if($code_type === 'ean_13' && $code_number === '5119417807081')
     {
-        return 'wood,burn it';
+        return 'Wood, burn it';
     }
     else if($code_type ==='ean_13' && $code_number === '9780201379624')
     {
-        return 'super huge barcode';
+        return 'Super huge barcode';
+    }
+        else if($code_type ==='ean_13' && $code_number === '7340116870030')
+    {
+        return 'Aloe Vera Jordgubb: Sort as plastic';
     }
     else
     {
-        return 'could not find any information';
+        return 'Product not found, try adding it!';
     }
     
     
 }
 $result = getResult($codetype,$codenumber);
 
-if($result ==='could not find any information')
-{
-    http_response_code(404);
-    
-}
+//if($result ==='Could not find any information')
+//{
+//    http_response_code(404);
+//    
+//}
 echo $result;
