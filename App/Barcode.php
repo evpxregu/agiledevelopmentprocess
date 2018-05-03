@@ -69,9 +69,9 @@ function getResult($code_type,$code_number){
            return 'Product not found, try adding it!';
     }
 
-}
 
-$result = getResult($codetype,$codenumber);
+
+    $result = getResult($codetype,$codenumber);
         //if($result ==='could not find any information')
         //{
           //  http_response_code(404);
@@ -81,6 +81,3 @@ $result = getResult($codetype,$codenumber);
 
 
     }
-
-
-}
