@@ -58,9 +58,7 @@ session_start();
 
                         <div id="Camera" class="tabcontent">
                             <div id="interactive" class="viewport">
-                                
-                                <div id="unknownBarcodeMessage" >
-                                </div>
+
                             </div>
                             <h1><div id="scanresult"></div></h1>
 
@@ -76,9 +74,9 @@ session_start();
                         
                         <input type="input" id="code_number">
                         <button onclick="GetProductInfoManual('ean_13', document.getElementById('code_number').value)">Check Barcode</button>
-                        
-                        
+                        <h1><div id="manualresult" class="topmargin"></div></h1>
                         </div>
+                        
                         <div id="Add" class="tabcontent topmargin">
                             <form action="addItemstoCSVfile.php" method="post">
                                 <div class = "form-group">
@@ -254,8 +252,7 @@ session_start();
         },function(data,textStatus,jqXHR)
         {
             
-           $('#resultModal').modal();
-           $('.modal-body').text(data);
+           $('#manualresult').text(data);
            
            //$('#result').html(data);
            //$('#resultModal').modal();
