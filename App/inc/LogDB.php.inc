@@ -17,7 +17,6 @@ class LogDB implements logDBI
     private $filename = 'log.csv';
     public function Add( $user_id,  $barcode)
     {
-        echo 'lol';
         $csv = fopen($this->filename, "a");
         $n = count(file($this->filename));
         
