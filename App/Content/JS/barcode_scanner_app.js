@@ -197,10 +197,6 @@ $(function() {
                     facingMode: "environment" // or user
                 }
             },
-            locator: {
-                patchSize: "medium",
-                halfSample: true
-            },
             numOfWorkers: 2,
             frequency: 10,
             decoder: {
@@ -215,7 +211,7 @@ $(function() {
                 left: "10%",   // left offset
                 bottom: "10%"  // bottom offset
               },
-            locate: true
+            locate: true   
         },
         lastResult : null,
         detectionHandlerId:[]
