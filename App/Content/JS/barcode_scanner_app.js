@@ -278,23 +278,14 @@ $(function() {
         },function(data,textStatus,jqXHR)
         {
             $('#unknownBarcodeMessage').text(data);
-            if(data === 'Product not found, try adding it!')
-            {
-                Quagga.start(); 
-            }
-            else
-            {
-                setTimeout(function(){
-                    Quagga.start(); 
-                },2000);
-                
-                
-            }
+            
+            Quagga.start(); 
+            
+            
         })
         .fail(function()
         {
             $('#unknownBarcodeMessage').text(data);
-            Quagga.start(); 
 
         });
     }

@@ -60,7 +60,6 @@ session_start();
                             <div id="interactive" class="viewport">
                                 
                                 <div id="unknownBarcodeMessage" >
-                                    Barcode could not be found :(!
                                 </div>
                             </div>
                             <h1><div id="scanresult"></div></h1>
