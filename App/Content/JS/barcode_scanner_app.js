@@ -251,7 +251,6 @@ $(function() {
     detectionFunction =function(result) {
         var code = result.codeResult.code;
         
-        Quagga.pause();
         if ( App.lastResult !== code) {
             
             console.log(result.codeResult.format);
