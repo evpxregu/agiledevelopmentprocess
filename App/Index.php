@@ -74,7 +74,7 @@
                         </form> -->
                         
                         <input type="input" id="code_number">
-                        <button onclick="test('ean_13', document.getElementById('code_number').value)">Check Barcode</button>
+                        <button onclick="GetProductInfoManual('ean_13', document.getElementById('code_number').value)">Check Barcode</button>
                         
                         
                         </div>
@@ -205,7 +205,7 @@
     // Open default camera 
     document.getElementById("defaultOpen").click();
     
-    function test(code_type,code_number){
+    function GetProductInfoManual(code_type,code_number){
         //getResult('ean_13',document.getElementById('code_number').value);
         
         jQuery.post('Barcode.php?',
@@ -224,12 +224,6 @@
            //$('#scanresult').html(data);
            console.log(textStatus);
            console.log(data); 
-           for(var intervalId in App.detectionHandlerId)
-           {
-               clearInterval(intervalId);
-           }
-           
-           hideUnknownBarcodeMessage();
         });
     }
     
