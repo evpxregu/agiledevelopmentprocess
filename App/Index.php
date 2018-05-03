@@ -204,7 +204,6 @@
     document.getElementById("defaultOpen").click();
     
     function GetProductInfoManual(code_type,code_number){
-        //getResult('ean_13',document.getElementById('code_number').value);
         
         jQuery.post('Barcode.php?',
         {
