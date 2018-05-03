@@ -255,10 +255,8 @@ $(function() {
             //showUnknownbarcodeMessage();
         }, 2000));
         
-        
         if ( App.lastResult !== code) {
-            //console.log('test');
-            //alert(code);
+            
             console.log(result.codeResult.format);
             console.log(JSON.stringify(result.codeResult));
             var format = result.codeResult.format;
@@ -281,15 +279,9 @@ $(function() {
            'code_number': code_number
                    
         },function(data,textStatus,jqXHR)
-        {
-            
-           //$('#unknownBarcodeMessage').text(data);  
-           //$('#resultModal').modal();
-           //$('.modal-body').text(data);
-           
+        {      
            $('#scanresult').html(data);
-           //$('#resultModal').modal();
-           //$('#scanresult').html(data);
+
            console.log(textStatus);
            console.log(data); 
            for(var intervalId in App.detectionHandlerId)
@@ -299,43 +291,12 @@ $(function() {
            App.detectionHandlerId = [];
            
            //hideUnknownBarcodeMessage();
-        });
-        
-        //try {
-         //   Block of code to try;
-        //}
-        //catch(err) {
-         //   Block of code to handle errors;
-        //}
-         //var domExceptionMessage = domEsceptionInstance.message;
-         
-        //todo rh: think about error handling
-    }
-    
-    function showUnknownbarcodeMessage()
-    {
-        $('#unknownBarcodeMessage').show();
-    }
-    function hideUnknownBarcodeMessage()
-    {
-        $('#unknownBarcodeMessage').hide();
-    }
-    $('#resultModal').on('show.bs.modal', function () { 
-        
-        Quagga.start();
-    });
-    
-    $('#resultModal').on('hide.bs.modal', function () { 
-        
-        
-        hideUnknownBarcodeMessage();
-        for(var intervalId in App.detectionHandlerId)
+        })
+        .fail(function()
         {
-            clearTimeout(intervalId);
-        }
-        App.detectionHandlerId = [];
-        App.lastResult = null;
-        console.log('Fired at start of hide event!');
-    }); 
+            $('#unknownBarcodeMessage').text(data);
+
+        });
+    }
 });
 

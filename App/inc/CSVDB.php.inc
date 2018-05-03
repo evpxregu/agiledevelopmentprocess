@@ -28,7 +28,7 @@ class CSVDB implements Idb
         );
         
         fputcsv($csv, $line);
-   }
+    }
     public function Get(string $barcode)
     {
         
