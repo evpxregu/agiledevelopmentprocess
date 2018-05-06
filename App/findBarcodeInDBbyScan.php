@@ -10,32 +10,24 @@
 function findValuesFromDB($bCode){
     
     #some dummy file
-    $x = fopen("db.csv", "r");
+    $csv = fopen("db.csv", "r");
     
     
-//    if (($csv = fopen("db.csv", "r")) !== FALSE) {
-    while(($row = fgetcsv($x, ",")) !== false){
-//    if($line[2] == $bCode)
-//    # line[2] is the 3rd element in the line i.e. the barcode
-//        return $line;
-//    }
-//    
-//    fclose($csv);
-//    }
-//    return false;
-//    
-//}
+//  while the csv file still has lines to iteratre through
+    while(($row = fgetcsv($csv, ",")) !== false){
 
-
+        
+      #compare the barcodes in the backend file for each line to the input barcode and return the name of the product 
+      #if there is a match
       if($row[2]==$bCode){
         return $row;
       }
     }
 
-    fclose($x);
+    fclose($csv);
   }
+
   return false;
-//}
 
 
 ?>
