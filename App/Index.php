@@ -50,11 +50,23 @@ session_start();
                         <div class="tab">
                           <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Camera')">Scan<i class="material-icons">camera_enhance</i></button>
                           <button class="tablinks" onclick="openTab(event, 'Manual')">Search<i class="material-icons">search</i></button>
+                          
+                          <button class="tablinks" onclick="openTab(event, 'Scan Search')">Scan Search<i class="material-icons">search</i></button>
+                          
+                          
                           <button class="tablinks" onclick="openTab(event, 'Add')">Add<i class="material-icons">note_add</i></button>
                           <button class="tablinks" onclick="openTab(event, 'History')">History<i class="material-icons">list</i></button>
                         </div>
 
                         <!-- Tab content -->
+                        
+                        <div id ="Scan Search" class="tabcontent">
+                            <div id="interactive" class="viewport">
+
+                            </div>
+                            <h1><div id="scanresult"></div></h1>
+
+                        </div>
 
                         <div id="Camera" class="tabcontent">
                             <div id="interactive" class="viewport">
@@ -260,6 +272,8 @@ session_start();
            console.log(textStatus);
            console.log(data); 
         });
+        
+        // do the same here for scanned input where it redirects the result in new page temporarily
     }
     
 </script>

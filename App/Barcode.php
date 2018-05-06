@@ -1,6 +1,8 @@
 <?php
 require_once('inc/LogDB.php.inc');
-require 'findBarcodeInDB.php';
+#require 'findBarcodeInDB.php';
+require 'findBarcodeInDBbyScan.php';
+
 //lets start with some validation of the submitted parameters
 $codetype = filter_input(INPUT_POST,'code_type',FILTER_SANITIZE_SPECIAL_CHARS);
 $codenumber = filter_input(INPUT_POST,'code_number',FILTER_SANITIZE_SPECIAL_CHARS);
