@@ -1,7 +1,8 @@
 <?php
 require_once('inc/LogDB.php.inc');
 #require 'findBarcodeInDB.php';
-require 'findBarcodeInDBbyScan.php';
+//require 'findBarcodeInDBbyScan.php';
+require 'inc/CSVDB.php.inc';
 
 //lets start with some validation of the submitted parameters
 $codetype = filter_input(INPUT_POST,'code_type',FILTER_SANITIZE_SPECIAL_CHARS);
@@ -17,9 +18,10 @@ if(session_id()  == '')
 
 function getResult($code_type,$code_number){
 
-    
-    $array = findValuesFromDB($code_number);
-    if($array == false){
+    $csvdb = new CSVDB();
+    $row = $csvdb->Get($code_number);
+//    $array = findValuesFromDB($code_number);
+    if($row == false){
         return "Product not found, try adding it!";
     }else{
         //todo: move the code below to the block that is actually ran when a barcode is succesfully found
@@ -27,17 +29,10 @@ function getResult($code_type,$code_number){
         //todo keep track of client on user side
         $logging->Add(session_id(),$code_number );
     
-        return $array[1] . '. Sort as: ' . $array[3];
+        return $row[1] . '. Sort as: ' . $row[3];
     }
     
-
 }
-
     $result = getResult($codetype,$codenumber);
-    //if($result ==='could not find any information')
-    //{
-      //  http_response_code(404);
-
-    //}
     
   echo $result;

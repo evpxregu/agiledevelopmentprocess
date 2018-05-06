@@ -15,6 +15,7 @@ class CSVDB implements Idb
 {
     
     private $filename = 'db.csv';    
+    
     public function Add( $barcode,  $name, $category)
     {
         $csv = fopen($this->filename, "a");
@@ -29,10 +30,21 @@ class CSVDB implements Idb
         
         fputcsv($csv, $line);
     }
+    
+    
     public function Get(string $barcode)
     {
-        
+        $csv = fopen($this->filename, "r");
+         //  while the csv file still has lines to iteratre through
+        while(($line = fgetcsv($csv, ",")) !== false){
+        #compare the barcodes in the backend file for each line to the input barcode and return the name of the product 
+        #if there is a match
+        if($line[2]==$barcode){
+          return $line;
+        }
+       }    
+
+        fclose($csv);
+        return false;
     }
-           
-    //put your code here
 }
