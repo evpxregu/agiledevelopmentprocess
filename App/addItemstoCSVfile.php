@@ -58,7 +58,7 @@ if (isset($_POST["submit"]))
     setTimeout(function () {
    window.location.href= "http://localhost/agiledevelopmentprocess/App/"; // the redirect goes here
 
-},5000);
+},1000);
 
 //window.location = "http://localhost/agiledevelopmentprocess/App/";
 </script>      
