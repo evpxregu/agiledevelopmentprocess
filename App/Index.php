@@ -48,10 +48,10 @@ session_start();
                     <div class="col-lg-8" align="center">
                         <!-- Tab links -->
                         <div class="tab">
-                          <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Camera')">Scan<i class="material-icons">camera_enhance</i></button>
-                          <button class="tablinks" onclick="openTab(event, 'Manual')">Search<i class="material-icons">search</i></button>
-                          <button class="tablinks" onclick="openTab(event, 'Add')">Add<i class="material-icons">note_add</i></button>
-                          <button class="tablinks" onclick="openTab(event, 'History')">History<i class="material-icons">list</i></button>
+                          <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Camera')"><div class="d-none d-sm-block">Scan</div><i class="material-icons">camera_enhance</i></button>
+                          <button class="tablinks" onclick="openTab(event, 'Manual')"><div class="d-none d-sm-block">Search</div><i class="material-icons">search</i></button>
+                          <button class="tablinks" onclick="openTab(event, 'Add')"><div class="d-none d-sm-block">Add</div><i class="material-icons">note_add</i></button>
+                          <button class="tablinks" onclick="openTab(event, 'History')"><div class="d-none d-sm-block">History</div><i class="material-icons">list</i></button>
                         </div>
 
                         <!-- Tab content -->
