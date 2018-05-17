@@ -94,6 +94,9 @@ session_start();
                                     <select name="newcategory">
                                         <option value="Plastic" name="Plastic">Plastic</option>
                                         <option value="Metal" name="Metal">Metal</option>
+                                        <option value="Glass" name="Glass">Glass</option>
+                                        <option value="Paper" name="Paper">Paper</option>
+                                        <option value="Cardboard" name="Cardboard">Cardboard</option>
                                         <option value="Compost" name="Compost">Compost</option>
                                         
                                         <option value="Other" name="Other">Other</option>
