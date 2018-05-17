@@ -56,7 +56,7 @@ if (isset($_POST["submit"]))
         ?>
 <script type="text/javascript">
     setTimeout(function () {
-   window.location.href= "http://localhost/agiledevelopmentprocess/App/"; // the redirect goes here
+   window.location.href= "../App/Index.php"; // the redirect goes here
 
 },1000);
 
