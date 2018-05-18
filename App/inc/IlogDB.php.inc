@@ -12,5 +12,6 @@
  */
 interface logDBI {
     public function Add( $user_id,  $barcode);
+    public function getAll();
     //put your code here
 }
