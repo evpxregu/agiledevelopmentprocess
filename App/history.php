@@ -33,10 +33,15 @@ function getHistory(){
   //Extract info from db
   foreach ($logLines as  $value)
   {
-    $row = $csvdb->Get($value[2]);
-    $history[$i] = $row;
+    //$row = $csvdb->Get($value[2]);
+    //$history[$i] = $row;
     //combine  it to only one array in history
-    array_push($history[$i], $value[3]);
+    //array_push($history[$i], $value[3]);
+    //$i++;
+    
+    $row = $csvdb->Get($value[2]);
+    array_push($row, $value[3]);
+    $history[$i] = $row;
     $i++;
   }
   
