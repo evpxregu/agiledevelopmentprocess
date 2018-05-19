@@ -126,7 +126,7 @@ session_start();
                                         foreach($array as $row){
                                             $i++;
                                             echo '<tr>';
-                                            echo '<th scope="row">'.$row[0].'</th>';
+                                            echo '<th scope="row">'.$i.'</th>';
                                             echo '<td>'. $row[1]. '</td>';
                                             echo '<td>'. $row[3]. '</td>';
                                             echo '<td>'. $row[2]. '</td>';
