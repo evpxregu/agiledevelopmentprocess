@@ -119,24 +119,20 @@ session_start();
                                   </tr>
                                 </thead>
                                 <tbody>
-                                  <tr>
-                                    <th scope="row">1</th>
-                                    <td>N!ck's kexbar</td>
-                                    <td>Plastic</td>
-                                    <td>03-05-18</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <td>General XR White</td>
-                                    <td>Plastic</td>
-                                    <td>22-04-18</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td>Aloe Vera Jordgubb</td>
-                                    <td>Plastic</td>
-                                    <td>19-04-18</td>
-                                  </tr>
+                                    <?php
+                                        include 'history.php';
+                                        $array = getHistory();
+                                        $i = 0;
+                                        foreach($array as $row){
+                                            $i++;
+                                            echo '<tr>';
+                                            echo '<th scope="row">'.$row[0].'</th>';
+                                            echo '<td>'. $row[1]. '</td>';
+                                            echo '<td>'. $row[3]. '</td>';
+                                            echo '<td>'. $row[2]. '</td>';
+                                            echo '</tr>';
+                                        }
+                                    ?>
                                 </tbody>
                               </table>
                         </div>
@@ -244,6 +240,7 @@ session_start();
 </html>
 
 <script>
+    
     // Open default camera 
     document.getElementById("defaultOpen").click();
     
@@ -267,6 +264,10 @@ session_start();
         });
         
         // do the same here for scanned input where it redirects the result in new page temporarily
+    }
+    
+    function GetHistory(){
+        
     }
     
 </script>

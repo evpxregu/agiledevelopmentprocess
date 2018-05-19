@@ -23,7 +23,7 @@ require 'inc/CSVDB.php.inc';
 */
 function getHistory(){
   //load both csv files
-  $csvDb = new CSVDB();
+  $csvdb = new CSVDB();
   $csvLog = new LogDB();
 
   //Get the arrays
@@ -36,7 +36,7 @@ function getHistory(){
     $row = $csvdb->Get($value[2]);
     $history[$i] = $row;
     //combine  it to only one array in history
-    array_push($history[i], $value[3]);
+    array_push($history[$i], $value[3]);
     $i++;
   }
   
