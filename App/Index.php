@@ -115,7 +115,7 @@ session_start();
                                     <th scope="col">#</th>
                                     <th scope="col">Product</th>
                                     <th scope="col">Sort as</th>
-                                    <th scope="col">Time scanned</th>
+                                    <th scope="col">Date scanned</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -129,7 +129,7 @@ session_start();
                                             echo '<th scope="row">'.$i.'</th>';
                                             echo '<td>'. $row[1]. '</td>';
                                             echo '<td>'. $row[3]. '</td>';
-                                            echo '<td>'. $row[4]. '</td>';
+                                            echo '<td>'. date("Y-m-d",$row[4]). '</td>';
                                             echo '</tr>';
                                         }
                                     ?>
