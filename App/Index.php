@@ -122,15 +122,15 @@ session_start();
                                     <?php
                                         include 'history.php';
                                         $array = getHistory();
-                                        $i = 0;
-                                        foreach($array as $row){
-                                            $i++;
+                                        $i = count($array);
+                                        foreach(array_reverse($array) as $row){
                                             echo '<tr>';
                                             echo '<th scope="row">'.$i.'</th>';
                                             echo '<td>'. $row[1]. '</td>';
                                             echo '<td>'. $row[3]. '</td>';
                                             echo '<td>'. date("Y-m-d",$row[4]). '</td>';
                                             echo '</tr>';
+                                            $i--;
                                         }
                                     ?>
                                 </tbody>
