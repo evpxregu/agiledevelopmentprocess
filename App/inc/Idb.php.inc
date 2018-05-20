@@ -11,7 +11,7 @@
  * @author Rick
  */
 interface Idb {
-    public function Add(string $barcode,string  $name,string $category);
-    public function Get(string $barcode);
+    public function Add( $barcode,  $name, $category);
+    public function Get( $barcode);
     //put your code here
 }
