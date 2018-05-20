@@ -32,7 +32,7 @@ class CSVDB implements Idb
     }
 
 
-    public function Get(string $barcode)
+    public function Get( $barcode)
     {
         $csv = fopen($this->filename, "r");
          //  while the csv file still has lines to iteratre through
