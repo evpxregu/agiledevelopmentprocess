@@ -8,17 +8,17 @@ session_start();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
-        <link href="./Content/CSS/Bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="./Content/CSS/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="./Content/CSS/custom-GUI.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <!-- TO DO rh: bundling  minification in release mode!-->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="./Content/js/bootstrap.min.js"></script>
-        <script src="./Content/js/adapter.js" ></script>
-        <script src="./Content/js/quagga.js" ></script>
-        <script src="./Content/js/barcode_scanner_app.js" ></script>
-        <script src="./Content/js/custom-GUI.js" ></script>
+        <script src="./Content/JS/bootstrap.min.js"></script>
+        <script src="./Content/JS/adapter.js" ></script>
+        <script src="./Content/JS/quagga.js" ></script>
+        <script src="./Content/JS/barcode_scanner_app.js" ></script>
+        <script src="./Content/JS/custom-GUI.js" ></script>
         
         <style type="text/css">
 
